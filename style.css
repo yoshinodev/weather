@@ -1,0 +1,31 @@
+body {
+    height: 100%;
+    background-color: cadetblue;
+    background: linear-gradient(to right, rgb(121, 145, 187), rgb(174, 201, 248), rgb(148, 186, 252));
+
+}
+
+.wpBackground {
+    height: 100vh;
+    min-height: 500px;
+    background: url(images/WeatherPrpBG.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#forecastTab li a.active {
+    border-bottom-color: transparent;
+    background-color: var(--CFColors-Orange-rgba);
+    color: var(--CFColors-darkGrey-rgba);
+    font-weight: bold;
+}
+
+#forecastTab li a {
+    border-bottom-color: transparent;
+    /*background-color: var(--CFColors-ltGrey-rgba);*/
+    color: white;
+    font-weight: 400;
+}
