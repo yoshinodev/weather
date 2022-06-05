@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Catch Weather app</title>
+    <title>Weather Catch app</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/uwe4jcq.css">
 
     <!--Fav icon-->
+    <link rel="shortcut icon" href="images/favicon.ico" /> 
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -28,6 +29,37 @@
 </head>
 <body>
     <div class="wpBackground">
+        <div class="d-flex flex-column h-100">
+            <div id="wpMain" class="container">
+                <div class="row">
+                    <div id="wpTitle" class="col text-center">
+                        WEATHER CATCH
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="wpCurrent" class="col">
+                        <div class="row">
+                            <div id="wpTemp" class="col-sm">
+                                <div id="location" class="row col d-md-inline-block">
+                                    Kernersville, NC
+                                </div>
+                                <div class="row col d-md-inline-block" id="dayTime">Monday, 12:00PM </div>
+                                <div class="row col d-md-inline-block" id="summary">Mostly Sunny</div>
+                                <div class="row col d-md-inline-block" id="currentTemp">
+                                    90&deg;
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <img id="weatherIcon" class="img-fluid" src="images/MostlySunny.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
 
     </div>
 
