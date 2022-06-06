@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
+<body onload="initGeoLocation();">
     <div class="wpBackground">
         <div class="d-flex flex-column h-100">
             <div id="wpMain" class="container">
@@ -56,7 +56,59 @@
                     </div>
                 </div>
                 <div class="row">
-                    
+                    <div id="wpConditions" class="col-md">
+                        <div class="row">
+                            <div id="perciptation" class="col-md">Percepitation 20%</div>
+                        </div>
+                        <div class="row">
+                            <div id="humidty" class="col-md">Humidity 95%</div>
+                        </div>
+                        <div class="row">
+                            <div id="wind" class="col-md">Wind 14mph</div>
+                        </div>
+                    </div>
+                    <div id="wpForecast" class="col-md">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" id="forecastTab">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#weekly">Hourly</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" data-toggle="tab" href="#daily">Weekly</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane container active" id="daily">
+                                <table id="dailyForecast" width=100%>
+
+                                </table>
+                            </div>
+                            <div class="tab-pane container fade" id="weekly">
+                                <table id="weeklyForecast" width=100%>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="wpFooter" class="col text-center">
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://darksky.net/poweredby/" target="_blank">Powered by Dark Sky</a>
+                            </div>
+                            <div class="col">
+                                <a href="https:\\coderfoundry.com" target="_blank">Learn To Code at Coder Foundry</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
                 </div>
             </div>
         </div>
