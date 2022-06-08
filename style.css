@@ -52,14 +52,14 @@ body {
 }
 
 #wpTitle {
-    font-family: titling-gothic-fb-wide, sans-serif;
+    font-family: "titling-gothic-fb", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.5em;
     color: var(--CFColors-darkGrey-rgba);
     -webkit-text-fill-color: white;
     /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1.5px;
+    /* -webkit-text-stroke-width: 1.5px; */
     -webkit-text-stroke-color: var(--CFColors-darkGrey-rgba);
 }
 
@@ -76,12 +76,12 @@ body {
 }
 
 #currentTemp {
-    font-size: 5em;
+    font-size: 4em;
     font-family: titling-gothic-fb-wide, sans-serif;
     color: white;
     -webkit-text-fill-color: white;
     /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1.5px;
+   /* -webkit-text-stroke-width: 1.5px;*/
     -webkit-text-stroke-color: var(--CFColors-darkGrey-rgba);
 }
 

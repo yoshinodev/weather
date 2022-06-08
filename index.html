@@ -21,13 +21,12 @@
     <meta name="theme-color" content="#ffffff">
     <!--End Fav icon-->
 
-    <script src="keys.js"></script>
-    <script src="weather.js"></script>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body onload="initGeoLocation();">
+<body>
     <div class="wpBackground">
         <div class="d-flex flex-column h-100">
             <div id="wpMain" class="container">
@@ -41,12 +40,12 @@
                         <div class="row">
                             <div id="wpTemp" class="col-sm">
                                 <div id="location" class="row col d-md-inline-block">
-                                    Kernersville, NC
+                                    
                                 </div>
-                                <div class="row col d-md-inline-block" id="dayTime">Monday, 12:00PM </div>
-                                <div class="row col d-md-inline-block" id="summary">Mostly Sunny</div>
+                                <div class="row col d-md-inline-block" id="dayTime"> </div>
+                                <div class="row col d-md-inline-block" id="summary"></div>
                                 <div class="row col d-md-inline-block" id="currentTemp">
-                                    90&deg;
+                                    &deg;
                                 </div>
                             </div>
                             <div class="col-sm">
@@ -58,23 +57,23 @@
                 <div class="row">
                     <div id="wpConditions" class="col-md">
                         <div class="row">
-                            <div id="perciptation" class="col-md">Percepitation 20%</div>
+                            <div id="precipitation" class="col-md">Precipitation: </div>
                         </div>
                         <div class="row">
-                            <div id="humidty" class="col-md">Humidity 95%</div>
+                            <div id="humidity" class="col-md">Humidity: </div>
                         </div>
                         <div class="row">
-                            <div id="wind" class="col-md">Wind 14mph</div>
+                            <div id="wind" class="col-md">Wind: </div>
                         </div>
                     </div>
                     <div id="wpForecast" class="col-md">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" id="forecastTab">
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#weekly">Hourly</a>
+                                <a class="nav-link" data-toggle="tab" href="#daily">Hourly</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" data-toggle="tab" href="#daily">Weekly</a>
+                                <a class="nav-link active" data-toggle="tab" href="#weekly">Weekly</a>
                             </li>
                         </ul>
 
@@ -114,7 +113,8 @@
         </div>
 
     </div>
-
+    <script src="keys.js"></script>
+    <script src="index.js"></script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
