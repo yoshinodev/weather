@@ -1,5 +1,4 @@
 
-
 function dayOfTheWeek(day, month, year) {
     const weekday = [
         "Monday",
@@ -26,7 +25,7 @@ function getWeather() {
     let weeklyForecast = document.getElementById("weeklyForecast");
 
     
-    const apiKey = document.getsc;
+    const apiKey = process.env.API_KEY;
     var DsProxyLink = `https://cors-anywhere.herokuapp.com/`;
     let wApi = `${DsProxyLink}https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&`;
     //to avoid the cors issue you need to run through a proxy or make the call server side.
