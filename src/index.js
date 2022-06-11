@@ -19,9 +19,10 @@ function getWeather() {
     navigator.geolocation.getCurrentPosition(success, error);
 
     function success(position) {
-        const { latitude: lat, longitude: lon } = position.coords
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
 
-    fetch(`/.netlify/functions/fetch-weather?lat=${lat},&long=${lon}`)
+    fetch(`/.netlify/functions/fetch-weather?lat=${latitude}&lon=${longitude}`)
       .then(response => response.json())
       .then(data => {
         console.log(data);
@@ -36,9 +37,6 @@ function getWeather() {
         var tableHTML = "";
         var resultsHTML = "";
 
-
-        /*const iconId = data.current.condition.icon.substr("//cdn.weatherapi.com/weather/64x64/".length);
-        icon.src = "./images/icons/" + iconId;*/
         let timeOfDay = "day";
         // get the unique id for each weather condition
         const code = data.current.condition.code;

@@ -4,7 +4,7 @@ const handler = async (event) => {
  const {lat, lon} = event.queryStringParameters
 
  const API_KEY = process.env.API_KEY
- const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${lat},${lon}&days=3`
+ const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&query=${lat},${lon}&days=3`
 
  try {
     const { data } = await axios.get(url)
