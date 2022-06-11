@@ -6,7 +6,7 @@ body {
 }
 
 .wpBackground {
-    height: 100vh;
+   height: 100vh;
     min-height: 500px;
     background: url(images/WeatherPrpBG.png) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -59,7 +59,7 @@ body {
     color: var(--CFColors-darkGrey-rgba);
     -webkit-text-fill-color: white;
     /* Will override color (regardless of order) */
-    /* -webkit-text-stroke-width: 1.5px; */
+     -webkit-text-stroke-width: 1px; 
     -webkit-text-stroke-color: var(--CFColors-darkGrey-rgba);
 }
 
