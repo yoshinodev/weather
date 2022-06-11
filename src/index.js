@@ -49,6 +49,10 @@ function getWeather() {
             app.style.background = `url("./images/${timeOfDay}/clear.jpg") no-repeat center center fixed`;
             appIcon.src ="./images/sunnyDay.png";
         }
+        if (code == 1000 && timeOfDay == "night") {
+            app.style.background = `url("./images/${timeOfDay}/clear.jpg") no-repeat center center fixed`;
+            appIcon.src ="./images/clearMoon.png";
+        }
         else if (
             code == 1003 ||
             code == 1006 ||
@@ -65,7 +69,23 @@ function getWeather() {
             app.style.background = `url(./images/${timeOfDay}/cloudy.jpg)no-repeat center center fixed`;
             appIcon.src ="./images/mostlySunny.png";
         }
-
+        else if (
+            code == 1003 ||
+            code == 1006 ||
+            code == 1009 ||
+            code == 1030 ||
+            code == 1069 ||
+            code == 1087 ||
+            code == 1135 ||
+            code == 1273 ||
+            code == 1276 ||
+            code == 1279 ||
+            code == 1282  &&
+            timeOfDay == "night"
+        ) {
+            app.style.background = `url(./images/${timeOfDay}/cloudy.jpg)no-repeat center center fixed`;
+            appIcon.src ="./images/cloudyMoon.png";
+        }
         // and rain
         else if (
             code == 1063 ||
@@ -100,8 +120,8 @@ function getWeather() {
     app.style.opacity = "1";
         // Render the daily forecast
     function dailyForecastRender(data){
-        let resultsHTML= "<tr><th>Day</th><th>Conditions</th><th>Max Temp</th><th>Feels Like</th></tr>";
-            rowCount = 9;
+        let resultsHTML= "<tr><th>Time</th><th>Conditions</th><th>Max Temp</th><th>Feels Like</th></tr>";
+            rowCount = 8;
        
         for (i = 0; i < rowCount; i++) {
             let summary = "";
