@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "netlify-cli": "^2.71.0"
+  },
+  "scripts": {
+    "dev": "http-server src -p 8080",
+    "netlify": "./node_modules/.bin/netlify",
+    "debug": "netlify dev --inspect"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

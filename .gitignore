@@ -1,1 +1,8 @@
 node_modules
+.env
+.vscode
+.yarn
+.gitattributes
+.pnp.cjs
+.pnp.loader.mjs
+
