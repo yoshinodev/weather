@@ -49,7 +49,7 @@ function getWeather() {
             app.style.background = `url("./images/${timeOfDay}/clear.jpg") no-repeat center center fixed`;
             appIcon.src ="./images/sunnyDay.png";
         }
-        if (code == 1000 && timeOfDay == "night") {
+        else if (code == 1000 && timeOfDay == "night") {
             app.style.background = `url("./images/${timeOfDay}/clear.jpg") no-repeat center center fixed`;
             appIcon.src ="./images/clearMoon.png";
         }
@@ -120,25 +120,24 @@ function getWeather() {
     app.style.opacity = "1";
         // Render the daily forecast
     function dailyForecastRender(data){
-        let resultsHTML= "<tr><th>Time</th><th>Conditions</th><th>Max Temp</th><th>Feels Like</th></tr>";
-            rowCount = 8;
+        let resultsHTML= `<tr><th>Time</th><th>Conditions</th><th>Max Temp</th><th>Feels Like</th></tr>`;
+            rowCount = 1;
        
         for (i = 0; i < rowCount; i++) {
-            let summary = "";
-            let tempHigh = 0;
-            let dateTeste;
-            //let dateTeste = data.forecast.forecastday[0].hour[i].time;
-            const now = new Date();
-            const current = now.getHours() + ':' + now.getMinutes();
-            let hours = new Date(data.forecast.forecastday[0].hour[i].time_epoch * 1000);
-            dateTeste = hours.toLocaleTimeString();
-            summary = data.forecast.forecastday[0].hour[i].condition.text;
-            tempHigh = data.forecast.forecastday[0].hour[i].temp_c  + " °C";
-            let feelsLike = data.forecast.forecastday[0].hour[i].feelslike_c + " °C";
-
-
-            resultsHTML += renderRow(dateTeste, summary, tempHigh, feelsLike);
            
+            const now = new Date();
+            let hr = now.getHours();
+ 
+            let summary = data.forecast.forecastday[0].hour[hr].condition.text;
+            let tempHigh = data.forecast.forecastday[0].hour[hr].temp_c  + " °C";
+            let feelsLike = data.forecast.forecastday[0].hour[hr].feelslike_c + " °C";
+            
+            let hrArr = data.forecast.forecastday[0].hour[hr].time;
+            let timeValue = hrArr.substr(11);
+        
+
+           resultsHTML += renderRow(timeValue, summary, tempHigh, feelsLike);
+
         }
         return resultsHTML;
         
@@ -171,8 +170,7 @@ function getWeather() {
 getWeather();
 
 
-
 // template function to render grid colums
-function renderRow(dateTeste, summary, tempHigh, colVal4) {
-    return `<tr><td>${dateTeste}</td><td>${summary}</td><td>${tempHigh}</td><td>${colVal4}</td></tr>`
+function renderRow(lol3, summary, tempHigh, colVal4) {
+    return `<tr><td>${lol3}</td><td>${summary}</td><td>${tempHigh}</td><td>${colVal4}</td></tr>`
 }
